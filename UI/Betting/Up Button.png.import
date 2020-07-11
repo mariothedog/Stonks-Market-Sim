@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/Up Button.png-d413020320be9e9db9e70c4a2454caf1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://UI/Betting/Up Button.png"
+dest_files=[ "res://.import/Up Button.png-d413020320be9e9db9e70c4a2454caf1.stex" ]
 
 [params]
 
