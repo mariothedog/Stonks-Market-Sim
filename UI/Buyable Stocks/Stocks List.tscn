@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://UI/Stock Entry.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Buyable Stocks/Stock Entry.tscn" type="PackedScene" id=2]
 
 [node name="Stocks List" type="MarginContainer"]
 margin_right = 859.0
