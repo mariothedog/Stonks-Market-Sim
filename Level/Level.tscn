@@ -79,7 +79,7 @@ custom_constants/separation = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 1027.0
-margin_bottom = 118.0
+margin_bottom = 87.0
 custom_constants/separation = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -87,25 +87,27 @@ __meta__ = {
 
 [node name="News Logo" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
 margin_right = 118.0
-margin_bottom = 118.0
+margin_bottom = 87.0
 rect_min_size = Vector2( 118, 0 )
+size_flags_horizontal = 0
 texture = SubResource( 1 )
 stretch_mode = 5
 
 [node name="News Headline" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
 margin_left = 118.0
 margin_right = 900.0
+margin_bottom = 87.0
 
 [node name="Game Logo" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
 margin_left = 900.0
 margin_right = 1027.0
-margin_bottom = 118.0
+margin_bottom = 87.0
 rect_min_size = Vector2( 127, 0 )
 texture = ExtResource( 1 )
 stretch_mode = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 118.0
+margin_top = 87.0
 margin_right = 1027.0
 margin_bottom = 768.0
 size_flags_horizontal = 3
@@ -113,8 +115,9 @@ size_flags_vertical = 3
 custom_constants/separation = 0
 
 [node name="Graph" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 22 )]
+margin_bottom = 681.0
 
 [node name="Betting" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 23 )]
 margin_left = 900.0
 margin_right = 1027.0
-margin_bottom = 650.0
+margin_bottom = 681.0

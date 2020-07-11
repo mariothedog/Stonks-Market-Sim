@@ -1,4 +1,4 @@
-extends MarginContainer
+extends CenterContainer
 
 onready var bet_amount_line_edit = get_node("MarginContainer/VBoxContainer/VBoxContainer/CenterContainer/Bet Amount")
 onready var bet_up_button = get_node("MarginContainer/VBoxContainer/CenterContainer/Bet Up")

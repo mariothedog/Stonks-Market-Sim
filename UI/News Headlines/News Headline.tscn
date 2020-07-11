@@ -1,93 +1,145 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://UI/Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/News Headlines/News Headline.gd" type="Script" id=2]
 [ext_resource path="res://UI/News Headlines/Secondary News.gd" type="Script" id=3]
 [ext_resource path="res://Themes/Secondary News.tres" type="Theme" id=4]
+[ext_resource path="res://UI/News Headlines/Primary Background.png" type="Texture" id=5]
+[ext_resource path="res://UI/News Headlines/Secondary Background.png" type="Texture" id=6]
+[ext_resource path="res://UI/Fonts/PressStart2P.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
-size = 64
-font_data = ExtResource( 1 )
+size = 40
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 32
-font_data = ExtResource( 1 )
+size = 18
+font_data = ExtResource( 7 )
 
 [node name="News Headline" type="MarginContainer"]
-margin_right = 567.0
-margin_bottom = 118.0
+margin_right = 650.0
+margin_bottom = 89.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 0
+custom_constants/margin_left = -31
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 567.0
-margin_bottom = 118.0
+margin_left = -31.0
+margin_right = 650.0
+margin_bottom = 87.0
+size_flags_vertical = 0
 
-[node name="Primary News" type="Label" parent="VBoxContainer"]
-margin_right = 567.0
-margin_bottom = 76.0
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_right = 681.0
+margin_bottom = 55.0
+
+[node name="Primary Background" type="TextureRect" parent="VBoxContainer/MarginContainer"]
+margin_right = 681.0
+margin_bottom = 55.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer"]
+margin_right = 681.0
+margin_bottom = 55.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Primary News" type="Label" parent="VBoxContainer/MarginContainer/MarginContainer"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 676.0
+margin_bottom = 50.0
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Trump dies"
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.34902 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 4
+text = "Trump found dead"
 align = 1
 uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Secondary News" type="ScrollContainer" parent="VBoxContainer"]
-margin_top = 80.0
-margin_right = 567.0
-margin_bottom = 118.0
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 59.0
+margin_right = 681.0
+margin_bottom = 87.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer2"]
+margin_right = 681.0
+margin_bottom = 28.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer2"]
+margin_right = 681.0
+margin_bottom = 28.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Secondary News" type="ScrollContainer" parent="VBoxContainer/MarginContainer2/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 671.0
+margin_bottom = 23.0
 theme = ExtResource( 4 )
 scroll_vertical_enabled = false
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Secondary News"]
-margin_right = 1076.0
-margin_bottom = 38.0
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer2/MarginContainer/Secondary News"]
+margin_right = 872.0
+margin_bottom = 18.0
 
-[node name="Label" type="Label" parent="VBoxContainer/Secondary News/HBoxContainer"]
-margin_right = 266.0
-margin_bottom = 38.0
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer2/MarginContainer/Secondary News/HBoxContainer"]
+margin_right = 288.0
+margin_bottom = 18.0
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.34902 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 4
 text = "Obama is gone - "
 align = 1
 uppercase = true
 
-[node name="Label2" type="Label" parent="VBoxContainer/Secondary News/HBoxContainer"]
-margin_left = 270.0
-margin_right = 536.0
-margin_bottom = 38.0
+[node name="Label2" type="Label" parent="VBoxContainer/MarginContainer2/MarginContainer/Secondary News/HBoxContainer"]
+margin_left = 292.0
+margin_right = 580.0
+margin_bottom = 18.0
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.34902 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 4
 text = "Obama is gone - "
 align = 1
 uppercase = true
 
-[node name="Label3" type="Label" parent="VBoxContainer/Secondary News/HBoxContainer"]
-margin_left = 540.0
-margin_right = 806.0
-margin_bottom = 38.0
+[node name="Label3" type="Label" parent="VBoxContainer/MarginContainer2/MarginContainer/Secondary News/HBoxContainer"]
+margin_left = 584.0
+margin_right = 872.0
+margin_bottom = 18.0
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.34902 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 4
 text = "Obama is gone - "
 align = 1
 uppercase = true
 
-[node name="Label4" type="Label" parent="VBoxContainer/Secondary News/HBoxContainer"]
-margin_left = 810.0
-margin_right = 1076.0
-margin_bottom = 38.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Obama is gone - "
-align = 1
-uppercase = true
-
-[node name="Add Secondary News" type="Timer" parent="VBoxContainer/Secondary News"]
+[node name="Add Secondary News" type="Timer" parent="VBoxContainer/MarginContainer2/MarginContainer/Secondary News"]
 wait_time = 0.5
 autostart = true
-[connection signal="timeout" from="VBoxContainer/Secondary News/Add Secondary News" to="VBoxContainer/Secondary News" method="_on_Add_Secondary_News_timeout"]
+[connection signal="timeout" from="VBoxContainer/MarginContainer2/MarginContainer/Secondary News/Add Secondary News" to="VBoxContainer/MarginContainer2/MarginContainer/Secondary News" method="_on_Add_Secondary_News_timeout"]
