@@ -3,10 +3,10 @@ extends Node
 var stocks_list = []
 
 class Stock:
-	var name
+	var company_name
 	var headline_category
-	func _init(_name : String, _headline_category : HeadlineCategories.Headline_Category):
-		self.name = _name
+	func _init(_company_name : String, _headline_category : HeadlineCategories.Headline_Category):
+		self.company_name = _company_name
 		self.headline_category = _headline_category
 		StockManager.stocks_list.append(self)
 

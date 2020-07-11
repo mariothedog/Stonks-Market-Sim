@@ -31,7 +31,7 @@ func generate():
 	# Headline
 	var stock = Util.rand_element(StockManager.stocks_list)
 	var preset = Util.rand_element(stock.headline_category.presets)
-	headline_text.text = preset.text.format({"name": stock.name})
+	headline_text.text = preset.text.format({"name": stock.company_name})
 	
 	# Public outcry
 	public_outcry_texture_progress.value = rand_range(preset.min_public_outrage, preset.max_public_outrage)
