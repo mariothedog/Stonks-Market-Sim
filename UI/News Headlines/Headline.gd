@@ -13,10 +13,10 @@ const INNER_ALPHA = 1
 # Onready
 onready var outline_color = get_node("Outline")
 onready var inner_background_color = get_node("MarginContainer/Inner Background")
-onready var headline_text = get_node("MarginContainer/CenterContainer/HBoxContainer/Headline")
+onready var headline_text = get_node("MarginContainer/CenterContainer/MarginContainer/HBoxContainer/Headline")
 onready var animation_player = get_node("AnimationPlayer")
 onready var fade_out_delay_timer = get_node("Fade Out Delay")
-onready var public_outcry_texture_progress = get_node("MarginContainer/CenterContainer/HBoxContainer/Public Outcry")
+onready var public_outcry_texture_progress = get_node("MarginContainer/CenterContainer/MarginContainer/HBoxContainer/Public Outcry")
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("ui_accept"):

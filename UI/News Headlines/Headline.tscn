@@ -41,22 +41,21 @@ tracks/0/keys = {
 }
 
 [node name="Headline" type="MarginContainer"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 332.0
+margin_bottom = 94.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Outline" type="ColorRect" parent="."]
-margin_right = 500.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 500, 100 )
+margin_right = 332.0
+margin_bottom = 94.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-margin_right = 500.0
-margin_bottom = 100.0
+margin_right = 332.0
+margin_bottom = 94.0
 custom_constants/margin_right = 5
 custom_constants/margin_top = 5
 custom_constants/margin_left = 5
@@ -65,46 +64,49 @@ custom_constants/margin_bottom = 5
 [node name="Inner Background" type="ColorRect" parent="MarginContainer"]
 margin_left = 5.0
 margin_top = 5.0
-margin_right = 495.0
-margin_bottom = 95.0
+margin_right = 327.0
+margin_bottom = 89.0
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
 margin_left = 5.0
 margin_top = 5.0
-margin_right = 307.0
-margin_bottom = 95.0
+margin_right = 327.0
+margin_bottom = 89.0
 size_flags_horizontal = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer"]
-margin_top = 13.0
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/CenterContainer"]
+margin_right = 322.0
+margin_bottom = 84.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 10
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/MarginContainer"]
+margin_left = 20.0
+margin_top = 10.0
 margin_right = 302.0
-margin_bottom = 77.0
+margin_bottom = 74.0
 custom_constants/separation = 10
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/CenterContainer/HBoxContainer"]
-margin_right = 84.0
-margin_bottom = 64.0
-custom_constants/margin_left = 20
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/CenterContainer/HBoxContainer/MarginContainer"]
-margin_left = 20.0
-margin_right = 84.0
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer"]
+margin_right = 64.0
 margin_bottom = 64.0
 texture = ExtResource( 2 )
 
-[node name="Headline" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer"]
-margin_left = 94.0
+[node name="Headline" type="Label" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer"]
+margin_left = 74.0
 margin_top = 13.0
-margin_right = 228.0
+margin_right = 208.0
 margin_bottom = 51.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Headline!"
 
-[node name="Public Outcry" type="TextureProgress" parent="MarginContainer/CenterContainer/HBoxContainer"]
+[node name="Public Outcry" type="TextureProgress" parent="MarginContainer/CenterContainer/MarginContainer/HBoxContainer"]
 modulate = Color( 1, 0, 0, 1 )
-margin_left = 238.0
-margin_right = 302.0
+margin_left = 218.0
+margin_right = 282.0
 margin_bottom = 64.0
 value = 100.0
 texture_progress = ExtResource( 2 )
