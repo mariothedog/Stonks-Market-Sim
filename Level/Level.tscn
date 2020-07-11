@@ -115,6 +115,7 @@ size_flags_vertical = 3
 custom_constants/separation = 0
 
 [node name="Graph" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 22 )]
+margin_right = 900.0
 margin_bottom = 681.0
 
 [node name="Betting" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 23 )]
