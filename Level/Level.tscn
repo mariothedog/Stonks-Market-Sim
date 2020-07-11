@@ -25,14 +25,14 @@ margin_bottom = 276.0
 margin_top = 288.0
 margin_right = 1024.0
 margin_bottom = 600.0
-split_offset = 216
+split_offset = 220
 dragger_visibility = 1
 
 [node name="Stocks List" parent="VSplitContainer/HSplitContainer" instance=ExtResource( 1 )]
-margin_right = 401.0
+margin_right = 611.0
 margin_bottom = 312.0
 
 [node name="Owned Stocks List" parent="VSplitContainer/HSplitContainer" instance=ExtResource( 2 )]
-margin_left = 413.0
+margin_left = 623.0
 margin_right = 1024.0
 margin_bottom = 312.0

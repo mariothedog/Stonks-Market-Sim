@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://UI/Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
-
-[sub_resource type="DynamicFont" id=1]
-size = 64
-font_data = ExtResource( 1 )
+[ext_resource path="res://UI/Owned Stock Entry.tscn" type="PackedScene" id=1]
 
 [node name="Owned Stocks List" type="MarginContainer"]
 margin_right = 408.0
@@ -17,13 +13,38 @@ __meta__ = {
 margin_right = 408.0
 margin_bottom = 76.0
 
-[node name="Label" type="Label" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 margin_right = 408.0
 margin_bottom = 76.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Owned Stocks"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+margin_right = 408.0
+margin_bottom = 76.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+margin_right = 359.0
+margin_bottom = 336.0
+
+[node name="Owned Stock Entry" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 359.0
+margin_bottom = 64.0
+
+[node name="Owned Stock Entry2" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 68.0
+margin_right = 359.0
+margin_bottom = 132.0
+
+[node name="Owned Stock Entry3" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 136.0
+margin_right = 359.0
+margin_bottom = 200.0
+
+[node name="Owned Stock Entry4" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 204.0
+margin_right = 359.0
+margin_bottom = 268.0
+
+[node name="Owned Stock Entry5" parent="MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 272.0
+margin_right = 359.0
+margin_bottom = 336.0
