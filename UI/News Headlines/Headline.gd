@@ -16,6 +16,7 @@ onready var inner_background_color = get_node("MarginContainer/Inner Background"
 onready var headline_text = get_node("MarginContainer/CenterContainer/HBoxContainer/Headline")
 onready var animation_player = get_node("AnimationPlayer")
 onready var fade_out_delay_timer = get_node("Fade Out Delay")
+onready var public_outcry_texture_progress = get_node("MarginContainer/CenterContainer/HBoxContainer/Public Outcry")
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("ui_accept"):
@@ -32,7 +33,8 @@ func generate():
 	var preset = Util.rand_element(stock.headline_category.presets)
 	headline_text.text = preset.text.format({"name": stock.name})
 	
-	# Public outcry - TODO
+	# Public outcry
+	public_outcry_texture_progress.value = rand_range(preset.min_public_outrage, preset.max_public_outrage)
 	
 	# Fade out delay
 	fade_out_delay_timer.wait_time = rand_range(preset.min_start_fade_out_delay, preset.max_start_fade_out_delay)

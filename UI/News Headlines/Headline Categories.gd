@@ -11,10 +11,16 @@ class Headline_Preset:
 	var text
 	var min_start_fade_out_delay
 	var max_start_fade_out_delay
-	func _init(_text : String, _min_start_fade_out_delay : int = 0.8, _max_start_fade_out_delay : int = 1.2):
+	var min_public_outrage
+	var max_public_outrage
+	func _init(_text : String,
+	_min_start_fade_out_delay : int = 0.8, _max_start_fade_out_delay : int = 1.2,
+	_min_public_outrage : int = 0, _max_public_outrage : int = 100):
 		self.text = _text
 		self.min_start_fade_out_delay = _min_start_fade_out_delay
 		self.max_start_fade_out_delay = _max_start_fade_out_delay
+		self.min_public_outrage = _min_public_outrage
+		self.max_public_outrage = _max_public_outrage
 
 onready var technology_category = Headline_Category.new("Technology", [
 	Headline_Preset.new("{name} tech!")
