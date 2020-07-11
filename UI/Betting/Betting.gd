@@ -1,9 +1,9 @@
 extends MarginContainer
 
-onready var bet_amount_line_edit = get_node("MarginContainer/VBoxContainer/VBoxContainer/Bet Amount")
+onready var bet_amount_line_edit = get_node("MarginContainer/VBoxContainer/VBoxContainer/CenterContainer/Bet Amount")
 onready var bet_up_button = get_node("MarginContainer/VBoxContainer/CenterContainer/Bet Up")
 onready var bet_down_button = get_node("MarginContainer/VBoxContainer/CenterContainer2/Bet Down")
-onready var balance_label = get_node("MarginContainer/VBoxContainer/Balance")
+onready var balance_label = get_node("MarginContainer/VBoxContainer/VBoxContainer2/Balance")
 onready var help_texture_rect = get_node("MarginContainer/VBoxContainer/Help")
 
 onready var bet_up_button_orig_modulate = bet_up_button.modulate

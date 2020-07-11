@@ -94,13 +94,13 @@ stretch_mode = 5
 
 [node name="News Headline" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
 margin_left = 118.0
-margin_right = 927.0
+margin_right = 900.0
 
 [node name="Game Logo" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
-margin_left = 927.0
+margin_left = 900.0
 margin_right = 1027.0
 margin_bottom = 118.0
-rect_min_size = Vector2( 100, 0 )
+rect_min_size = Vector2( 127, 0 )
 texture = ExtResource( 1 )
 stretch_mode = 1
 
@@ -115,6 +115,6 @@ custom_constants/separation = 0
 [node name="Graph" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 22 )]
 
 [node name="Betting" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 23 )]
-margin_left = 850.0
+margin_left = 900.0
 margin_right = 1027.0
 margin_bottom = 650.0

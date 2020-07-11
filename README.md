@@ -1,5 +1,7 @@
 # Stonks Market Sim
 
+![](README/Thumbnail.png)
+
 # Credits
 Programming - Mariothedog
 
