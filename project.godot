@@ -19,6 +19,12 @@ config/name="Stonks Market Sim"
 run/main_scene="res://Level/Level.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Util="*res://Util/Util.gd"
+HeadlineCategories="*res://UI/News Headlines/Headline Categories.gd"
+StockManager="*res://UI/Buyable Stocks/Stock Manager.gd"
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
