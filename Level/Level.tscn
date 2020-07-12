@@ -1,124 +1,89 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
-[ext_resource path="res://UI/News Logo/frame_13.png" type="Texture" id=2]
+[ext_resource path="res://UI/Tutorial/Tutorial.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Level/WorldEnvironment.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/News Headlines/News Headline.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Level/Level.gd" type="Script" id=4]
-[ext_resource path="res://UI/News Logo/frame_07.png" type="Texture" id=5]
-[ext_resource path="res://UI/News Logo/frame_08.png" type="Texture" id=6]
-[ext_resource path="res://UI/News Logo/frame_09.png" type="Texture" id=7]
-[ext_resource path="res://UI/News Logo/frame_10.png" type="Texture" id=8]
-[ext_resource path="res://UI/News Logo/frame_11.png" type="Texture" id=9]
-[ext_resource path="res://UI/News Logo/frame_12.png" type="Texture" id=10]
-[ext_resource path="res://UI/News Logo/frame_00.png" type="Texture" id=11]
-[ext_resource path="res://UI/News Logo/frame_01.png" type="Texture" id=12]
-[ext_resource path="res://UI/News Logo/frame_02.png" type="Texture" id=13]
-[ext_resource path="res://UI/News Logo/frame_03.png" type="Texture" id=14]
-[ext_resource path="res://UI/News Logo/frame_04.png" type="Texture" id=15]
-[ext_resource path="res://UI/News Logo/frame_05.png" type="Texture" id=16]
-[ext_resource path="res://UI/News Logo/frame_06.png" type="Texture" id=17]
-[ext_resource path="res://UI/News Logo/frame_16.png" type="Texture" id=18]
-[ext_resource path="res://UI/News Logo/frame_17.png" type="Texture" id=19]
-[ext_resource path="res://UI/News Logo/frame_15.png" type="Texture" id=20]
-[ext_resource path="res://UI/News Logo/frame_14.png" type="Texture" id=21]
+[ext_resource path="res://UI/Betting/Kaching.wav" type="AudioStream" id=5]
+[ext_resource path="res://UI/Betting/Invalid Bet.wav" type="AudioStream" id=6]
 [ext_resource path="res://UI/Graph/Graph.tscn" type="PackedScene" id=22]
 [ext_resource path="res://UI/Betting/Betting.tscn" type="PackedScene" id=23]
-
-[sub_resource type="AnimatedTexture" id=1]
-frames = 18
-fps = 20.0
-frame_0/texture = ExtResource( 11 )
-frame_1/texture = ExtResource( 12 )
-frame_1/delay_sec = 0.0
-frame_2/texture = ExtResource( 13 )
-frame_2/delay_sec = 0.0
-frame_3/texture = ExtResource( 14 )
-frame_3/delay_sec = 0.0
-frame_4/texture = ExtResource( 15 )
-frame_4/delay_sec = 0.0
-frame_5/texture = ExtResource( 16 )
-frame_5/delay_sec = 0.0
-frame_6/texture = ExtResource( 17 )
-frame_6/delay_sec = 0.0
-frame_7/texture = ExtResource( 5 )
-frame_7/delay_sec = 0.0
-frame_8/texture = ExtResource( 6 )
-frame_8/delay_sec = 0.0
-frame_9/texture = ExtResource( 7 )
-frame_9/delay_sec = 0.0
-frame_10/texture = ExtResource( 8 )
-frame_10/delay_sec = 0.0
-frame_11/texture = ExtResource( 9 )
-frame_11/delay_sec = 0.0
-frame_12/texture = ExtResource( 10 )
-frame_12/delay_sec = 0.0
-frame_13/texture = ExtResource( 2 )
-frame_13/delay_sec = 0.0
-frame_14/texture = ExtResource( 21 )
-frame_14/delay_sec = 0.0
-frame_15/texture = ExtResource( 20 )
-frame_15/delay_sec = 0.0
-frame_16/texture = ExtResource( 18 )
-frame_16/delay_sec = 0.0
-frame_17/texture = ExtResource( 19 )
-frame_17/delay_sec = 0.0
 
 [node name="Level" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 3.0
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 1027.0
+margin_right = 1024.0
 margin_bottom = 768.0
 custom_constants/separation = 0
+
+[node name="News Headline" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_right = 1024.0
+margin_bottom = 83.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 1027.0
-margin_bottom = 87.0
-custom_constants/separation = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="News Logo" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
-margin_right = 118.0
-margin_bottom = 87.0
-rect_min_size = Vector2( 118, 0 )
-size_flags_horizontal = 0
-texture = SubResource( 1 )
-stretch_mode = 5
-
-[node name="News Headline" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
-margin_left = 118.0
-margin_right = 900.0
-margin_bottom = 87.0
-
-[node name="Game Logo" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
-margin_left = 900.0
-margin_right = 1027.0
-margin_bottom = 87.0
-rect_min_size = Vector2( 127, 0 )
-texture = ExtResource( 1 )
-stretch_mode = 1
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 87.0
-margin_right = 1027.0
+margin_top = 83.0
+margin_right = 1024.0
 margin_bottom = 768.0
-size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 
-[node name="Graph" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 22 )]
+[node name="Graph" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 22 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_right = 900.0
-margin_bottom = 681.0
+margin_bottom = 685.0
 
-[node name="Betting" parent="VBoxContainer/HBoxContainer2" instance=ExtResource( 23 )]
+[node name="Betting" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 23 )]
 margin_left = 900.0
-margin_right = 1027.0
-margin_bottom = 681.0
+margin_right = 1024.0
+margin_bottom = 685.0
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 2 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Tutorial" parent="CanvasLayer" instance=ExtResource( 1 )]
+visible = false
+margin_left = 30.0
+margin_top = 180.0
+margin_right = 979.0
+margin_bottom = 615.0
+
+[node name="First Primary Headline" type="Timer" parent="."]
+one_shot = true
+
+[node name="Add Primary Point" type="Timer" parent="."]
+wait_time = 15.0
+
+[node name="Primary Headline Delay" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Win Bet" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -30.0
+
+[node name="Lose Bet" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -30.0
+pitch_scale = 1.2
+
+[node name="Game Over" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -30.0
+pitch_scale = 0.8
+[connection signal="money_value_changed" from="." to="VBoxContainer/HBoxContainer/Betting" method="_on_Level_money_value_changed"]
+[connection signal="bet_down_pressed_successfully" from="VBoxContainer/HBoxContainer/Betting" to="." method="_on_Betting_bet_down_pressed_successfully"]
+[connection signal="bet_up_pressed_successfully" from="VBoxContainer/HBoxContainer/Betting" to="." method="_on_Betting_bet_up_pressed_successfully"]
+[connection signal="start_pressed" from="VBoxContainer/HBoxContainer/Betting" to="." method="_on_Betting_start_pressed"]
+[connection signal="tutorial_tex_rect_mouse_entered" from="VBoxContainer/HBoxContainer/Betting" to="." method="_on_Betting_tutorial_tex_rect_mouse_entered"]
+[connection signal="tutorial_tex_rect_mouse_exited" from="VBoxContainer/HBoxContainer/Betting" to="." method="_on_Betting_tutorial_tex_rect_mouse_exited"]
+[connection signal="timeout" from="First Primary Headline" to="." method="_on_First_Primary_Headline_timeout"]
+[connection signal="timeout" from="Add Primary Point" to="." method="_on_Add_Primary_Point_timeout"]
+[connection signal="timeout" from="Primary Headline Delay" to="." method="_on_Primary_Headline_Delay_timeout"]

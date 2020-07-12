@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/Betting/Tutorial Background.png" type="Texture" id=1]
+[ext_resource path="res://UI/Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="Tutorial" type="MarginContainer"]
+margin_right = 949.0
+margin_bottom = 400.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 949.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 400, 400 )
+texture = ExtResource( 1 )
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 949.0
+margin_bottom = 400.0
+mouse_filter = 2
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer"]
+margin_left = 10.0
+margin_top = 36.0
+margin_right = 939.0
+margin_bottom = 363.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.631373, 0.631373, 0.631373, 0.376471 )
+text = "The headlines will show up at the top.
+Each headline will have an impact to the Stonk market.
+
+The primary headlines will appear in the blue bar and these will have the most impact to the Stonk market.
+The secondary headlines will scroll by in the red bar and will have a much lower impact.
+
+It is your job to correctly predict what the impact will be.
+Once you are sure of your decision, place a bet and press the corresponding button.
+
+If you win, you will get 2x your investment back.
+However, the risks will also be large, as you will lose all your investments if you guess wrong.
+
+If you do not keep track of your current balance, you will go backrupt. So be careful!
+
+If you are unsure and don't want to take the risk, you can press neither or just bet a low amount, and then wait for the next headlines."
