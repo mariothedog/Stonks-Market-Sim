@@ -16,19 +16,25 @@ _global_script_class_icons={
 [application]
 
 config/name="Stonks Market Sim"
-run/main_scene="res://Level/Level.tscn"
+run/main_scene="res://Graph/Graph.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Util="*res://Util/Util.gd"
-Music="*res://Music/Music.tscn"
+
+[debug]
+
+gdscript/completion/autocomplete_setters_and_getters=true
+gdscript/warnings/unused_class_variable=true
+gdscript/warnings/unsafe_property_access=true
+gdscript/warnings/unsafe_method_access=true
+gdscript/warnings/unsafe_cast=true
+gdscript/warnings/unsafe_call_argument=true
 
 [display]
 
 window/size/height=768
-window/stretch/mode="2d"
-window/stretch/aspect="keep"
 
 [importer_defaults]
 

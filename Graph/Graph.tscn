@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Graph/Graph.gd" type="Script" id=1]
+
+[node name="Graph" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Graph Drawer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = -10
+custom_constants/margin_top = -10
+custom_constants/margin_left = -10
+custom_constants/margin_bottom = -10
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="item_rect_changed" from="Graph Drawer" to="Graph Drawer" method="_on_Graph_item_rect_changed"]
