@@ -1,23 +1,45 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Graph/Graph.gd" type="Script" id=1]
+[ext_resource path="res://Graph/Drawer.gd" type="Script" id=1]
+[ext_resource path="res://Graph/Background.png" type="Texture" id=2]
+[ext_resource path="res://Graph/Border.png" type="Texture" id=3]
 
-[node name="Graph" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Graph" type="MarginContainer"]
+anchor_left = 0.203125
+anchor_top = 0.229167
+anchor_right = 0.835938
+anchor_bottom = 0.75
+rect_clip_content = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
-[node name="Graph Drawer" type="MarginContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/margin_right = -10
-custom_constants/margin_top = -10
-custom_constants/margin_left = -10
-custom_constants/margin_bottom = -10
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 648.0
+margin_bottom = 399.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+
+[node name="Drawer" type="MarginContainer" parent="."]
+margin_right = 648.0
+margin_bottom = 399.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="item_rect_changed" from="Graph Drawer" to="Graph Drawer" method="_on_Graph_item_rect_changed"]
+
+[node name="Line2D" type="Line2D" parent="Drawer"]
+width = 4.0
+default_color = Color( 0.831373, 0.317647, 0.266667, 1 )
+antialiased = true
+
+[node name="Border" type="NinePatchRect" parent="."]
+margin_right = 648.0
+margin_bottom = 399.0
+texture = ExtResource( 3 )
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+[connection signal="resized" from="." to="Drawer" method="_on_Graph_resized"]
