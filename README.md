@@ -4,7 +4,8 @@
 
 # Credits
 Programming - Mariothedog
-
-Design - Mariothedog, Lynn Titis, Degeneral, Viesulis
+Art - Degeneral
+Design - Mariothedog, Lynn Titis, Degeneral
+HTML Help - Viesulis
 
 Font - Roboto - https://fonts.google.com/specimen/Roboto
